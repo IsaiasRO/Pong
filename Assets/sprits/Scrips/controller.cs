@@ -6,10 +6,12 @@ public class controller: MonoBehaviour {
 	[SerializeField]  Transform leftPaddle;
 	[SerializeField]  Transform rightPaddle;
 	[SerializeField] int speed = 4;
+	[SerializeField] GameObject ball;
 
 	// Use this for initialization
 	void Start () {
 		
+		//Instantiate (ball, new Vector3 (0, 0, 0), Quaternion.identity);
 	}
 	
 	// Update is called once per frame
@@ -30,5 +32,6 @@ public class controller: MonoBehaviour {
 			//move paddle 2
 			rightPaddle.Translate(Vector2.down * Time.deltaTime * speed);
 		}
+
 	}
 }
