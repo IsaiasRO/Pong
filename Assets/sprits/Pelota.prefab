@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4369854531749340}
   - component: {fileID: 212879978522845316}
-  - component: {fileID: 114489483767074768}
   - component: {fileID: 50284484817290272}
   - component: {fileID: 58855698921936196}
+  - component: {fileID: 114835541032430874}
   m_Layer: 0
   m_Name: Pelota
   m_TagString: Untagged
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1593213832489302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0.01, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15496022, y: 0.15496022, z: 0.15496022}
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0.068958744, y: 0}
   serializedVersion: 2
   m_Radius: 1.9082611
---- !u!114 &114489483767074768
+--- !u!114 &114835541032430874
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
