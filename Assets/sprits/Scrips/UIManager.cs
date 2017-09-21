@@ -8,12 +8,10 @@ public class UIManager : MonoBehaviour {
 	[SerializeField] Text Setcounter2;
 	int counter = 0;
 	int counter2 = 0;
-	// Use this for initialization
+
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
 	public void UpdateCounter1 () {
 		counter += 1;
 		Setcounter1.text = "" +counter; 

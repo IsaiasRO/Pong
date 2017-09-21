@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ball: MonoBehaviour {
-
+	[SerializeField]float speed = 2;
 	Rigidbody2D rb;
 	[SerializeField] UIManager uimanager;
 	void Start (){
@@ -13,14 +13,14 @@ public class ball: MonoBehaviour {
 
 	}
 	void Update(){
-		
+		//ball point left
 		if (transform.position.x < -10.8f) {
 			transform.position = Vector2.zero;
 			rb.velocity = Vector2.zero;
 			uimanager.UpdateCounter2();
 			StartCoroutine (Pause ());
 		}
-		//ball goes too far right
+		//ball point right
 		if (transform.position.x > 10.8f) {
 			transform.position = Vector2.zero;
 			rb.velocity = Vector2.zero;
@@ -34,11 +34,8 @@ public class ball: MonoBehaviour {
 		RandownBall ();
 	}
 
-
 	void RandownBall(){
-
-		transform.position = Vector2.zero;
-		//velocity in ball randown
+		
 		rb.velocity = new Vector2 (8f, 0f);
 		//Random Direction
 		int xDirection = Random.Range (0, 2);
