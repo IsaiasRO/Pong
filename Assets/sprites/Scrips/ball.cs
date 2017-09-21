@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ball: MonoBehaviour {
-	[SerializeField]float speed = 2;
 	Rigidbody2D rb;
 	[SerializeField] UIManager uimanager;
 	void Start (){
@@ -37,29 +36,27 @@ public class ball: MonoBehaviour {
 	void RandownBall(){
 		
 		rb.velocity = new Vector2 (8f, 0f);
-		//Random Direction
 		int xDirection = Random.Range (0, 2);
 		int yDirection = Random.Range (0, 3);
-
-		Vector2 launchDirection = new Vector2 ();
+		//launchdirection
+		Vector2 BallDirection = new Vector2 ();
 
 		if (xDirection == 0) {
-			launchDirection.x = -8f;
+			BallDirection.x = -8f;
 		}
 		if (xDirection == 1) {
-			launchDirection.x = 8f;
+			BallDirection.x = 8f;
 		}
 		if (yDirection == 0) {
-			launchDirection.y = -8f;
+			BallDirection.y = -8f;
 		}
 		if (yDirection == 1) {
-			launchDirection.y = 8f;
+			BallDirection.y = 8f;
 		}
 		if (yDirection == 2) {
-			launchDirection.y = 0;
+			BallDirection.y = 0;
 		}
-		//asigna velocidad 
-		rb.velocity = launchDirection;
+		rb.velocity = BallDirection;
 
 	}
 }
